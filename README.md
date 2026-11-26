@@ -6,6 +6,16 @@
 
 **simply_yt_dwn** es una aplicación portátil para Windows que descarga videos y audio de YouTube y convierte los archivos en tu equipo. Las etiquetas del modo Audio ayudan a organizar una biblioteca personal de música.
 
+### Cómo usar
+
+1. Descarga el ZIP de Windows x64 y extrae todo su contenido en una carpeta.
+2. Abre `simply_yt_dwn.exe`. Pulsa **Cambiar carpeta** si quieres elegir dónde guardar los archivos.
+3. Pega un enlace de YouTube, elige **Video** o **Audio** y pulsa **Descargar**.
+4. Para varios enlaces, abre **Lista manual**, pega uno por línea y pulsa **Revisar lista**. Si pegas una lista de reproducción en el campo principal, también verás la cola antes de descargar.
+5. En la vista previa puedes quitar elementos. Pulsa **Descargar selección** para iniciar la cola. Si un elemento falla, selecciona su fila para ver el motivo y usa **Reintentar fallidos** cuando corresponda.
+
+Si YouTube pide verificar tu sesión, inicia sesión en una ventana normal de Firefox y elige **Usar sesión de Firefox** en la app.
+
 ### Características
 
 - **Video:** MP4 a 1920 × 1080 y 60 fps, con audio estéreo. Conserva la proporción de la imagen y ajusta la resolución y los fotogramas a ese formato de salida.
@@ -24,6 +34,16 @@ Descarga el ZIP de [Releases](https://github.com/krazytoonesinc-hue/simply_yt_dw
 ## English
 
 **simply_yt_dwn** is a portable Windows app that downloads YouTube video and audio and converts the files on your computer. Audio tags help organize a personal music library.
+
+### How to use
+
+1. Download the Windows x64 ZIP and extract all its contents into a folder.
+2. Run `simply_yt_dwn.exe`. Select **Cambiar carpeta** (Change folder) to choose where files are saved.
+3. Paste a YouTube link, choose **Video** or **Audio**, and select **Descargar** (Download).
+4. For multiple links, open **Lista manual** (Custom list), paste one link per line, and select **Revisar lista** (Review list). A playlist pasted in the main field also opens a preview.
+5. Remove any unwanted entries, then select **Descargar selección** (Download selection). If an item fails, select its row to see why and use **Reintentar fallidos** (Retry failed) when appropriate.
+
+If YouTube asks you to verify your session, sign in through a standard Firefox window and select **Usar sesión de Firefox** (Use Firefox session) in the app.
 
 ### Features
 

@@ -20,7 +20,7 @@ foreach ($name in '_tcl_data', '_tk_data') {
     }
 }
 Copy-Item -LiteralPath bin,source,licenses -Destination $package -Recurse -Force
-Copy-Item -LiteralPath LEEME.md -Destination $package -Force
+Copy-Item -LiteralPath README.md,LEEME.md -Destination $package -Force
 tar.exe -a -cf dist/simply_yt_dwn-Windows-x64.zip -C dist simply_yt_dwn
 if ($LASTEXITCODE -ne 0) { throw 'No se pudo generar el ZIP.' }
 python -m zipfile -t dist/simply_yt_dwn-Windows-x64.zip
