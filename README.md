@@ -4,7 +4,7 @@
 
 ## Español
 
-**simply_yt_dwn** es una aplicación portátil para Windows que descarga videos y audio de YouTube y convierte los archivos en tu equipo. Puedes usarla para organizar una biblioteca personal de música en Plex.
+**simply_yt_dwn** es una aplicación portátil para Windows que descarga videos y audio de YouTube y convierte los archivos en tu equipo. Las etiquetas del modo Audio ayudan a organizar una biblioteca personal de música.
 
 ### Características
 
@@ -17,13 +17,13 @@
 
 - **Portátil:** extrae el ZIP y abre `simply_yt_dwn.exe`, sin instalador.
 - **Archivos fáciles de ordenar:** guardados con el título y en la carpeta que elijas.
-- **Útil para Plex:** las etiquetas quedan dentro del FLAC. Cuando falta una coincidencia fiable, se conservan los datos de origen disponibles.
+- **Biblioteca organizada:** las etiquetas quedan dentro del FLAC. Cuando falta una coincidencia fiable, se conservan los datos de origen disponibles.
 
 Descarga el ZIP de [Releases](https://github.com/krazytoonesinc-hue/simply_yt_dwn/releases/latest) y consulta la [guía de uso](LEEME.md). Usa la aplicación con contenido que tengas autorización para descargar.
 
 ## English
 
-**simply_yt_dwn** is a portable Windows app that downloads YouTube video and audio and converts the files on your computer. It can help you organize a personal music library in Plex.
+**simply_yt_dwn** is a portable Windows app that downloads YouTube video and audio and converts the files on your computer. Audio tags help organize a personal music library.
 
 ### Features
 
@@ -36,7 +36,7 @@ Descarga el ZIP de [Releases](https://github.com/krazytoonesinc-hue/simply_yt_dw
 
 - **Portable:** extract the ZIP and run `simply_yt_dwn.exe`. No installer is required.
 - **Easy to organize:** files use their titles and go in the folder you choose.
-- **Useful for Plex:** tags are embedded in the FLAC file. When a reliable match is unavailable, the app keeps the metadata available from the source.
+- **Organized music library:** tags are embedded in the FLAC file. When a reliable match is unavailable, the app keeps the metadata available from the source.
 
 Download the ZIP from [Releases](https://github.com/krazytoonesinc-hue/simply_yt_dwn/releases/latest). Use the app with content you are authorized to download.
 

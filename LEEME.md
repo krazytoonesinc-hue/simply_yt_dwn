@@ -29,6 +29,6 @@ Pulsa **Lista manual**, pega un enlace de YouTube por línea y selecciona **Revi
 
 Los títulos públicos se consultan en paralelo. Si un título no está disponible en la vista previa, aparece el enlace y la app intenta recuperar el título durante la descarga.
 
-## Etiquetas para Plex
+## Etiquetas musicales
 
-En modo Audio, la app busca la grabación en MusicBrainz por título, artista y duración. Cuando hay una coincidencia clara, incrusta los datos disponibles de la edición en el FLAC. Si la coincidencia es ambigua o el servicio no responde, guarda las etiquetas disponibles del origen. La selección de una edición puede variar según los datos de origen. En Plex puedes activar Preferir metadatos locales desde los ajustes avanzados de la biblioteca de música.
+En modo Audio, la app busca la grabación en MusicBrainz por título, artista y duración. Cuando hay una coincidencia clara, incrusta los datos disponibles de la edición en el FLAC. Si la coincidencia es ambigua o el servicio no responde, guarda las etiquetas disponibles del origen. La selección de una edición puede variar según los datos de origen.
