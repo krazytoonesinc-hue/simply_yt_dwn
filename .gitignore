@@ -1,0 +1,14 @@
+/_internal/
+/bin/
+/dist/
+/build/
+*.exe
+*.zip
+__pycache__/
+*.py[cod]
+*.spec
+.env
+.env.*
+*cookies*.txt
+*session*.txt
+settings.json
