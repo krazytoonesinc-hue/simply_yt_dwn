@@ -35,7 +35,6 @@ def tool(name):
 
 
 def youtube_url(value):
-    mix = False
     try:
         parsed = urlsplit(value.strip())
         query = parse_qs(parsed.query)
@@ -45,19 +44,18 @@ def youtube_url(value):
         }:
             raise ValueError
         playlist = query.get("list", [""])[0]
-        mix = playlist.startswith("RD")
-        if not mix and re.fullmatch(r"[A-Za-z0-9_-]+", playlist):
-            return "https://www.youtube.com/playlist?" + urlencode({"list": playlist})
         parts = parsed.path.strip("/").split("/")
         video = query.get("v", [""])[0] if parts == ["watch"] else ""
         if host == "youtu.be" or (len(parts) == 2 and parts[0] in {"shorts", "live", "embed"}):
             video = parts[-1]
+        if re.fullmatch(r"[A-Za-z0-9_-]+", playlist):
+            if playlist.startswith("RD") and VIDEO_ID.fullmatch(video):
+                return "https://www.youtube.com/watch?" + urlencode({"v": video, "list": playlist, "start_radio": 1})
+            return "https://www.youtube.com/playlist?" + urlencode({"list": playlist})
         if VIDEO_ID.fullmatch(video):
             return "https://www.youtube.com/watch?v=" + video
     except ValueError:
         pass
-    if mix:
-        raise ValueError("Este Mix necesita el enlace a uno de sus videos.")
     raise ValueError("Pega un enlace válido de YouTube.")
 
 
@@ -352,7 +350,7 @@ class Worker:
                             raise Cancelled
                         temp = Path(staging) / str(item[0])
                         try:
-                            if isinstance(item[3], str) and retry is not None and "/watch?" in item[2]:
+                            if isinstance(item[3], str) and retry is not None and VIDEO_ID.fullmatch(item[2].removeprefix("https://www.youtube.com/watch?v=")):
                                 _, _, recovered = self.read_listing(common, item[2])
                                 item = (item[0], *recovered[0])
                             temp.mkdir()
@@ -386,7 +384,7 @@ class Worker:
         entries = []
         with ThreadPoolExecutor(max_workers=6) as lookups:
             titles = {url: lookups.submit(public_title, url)
-                      for url in dict.fromkeys(urls) if url.startswith(singles)}
+                      for url in dict.fromkeys(urls) if VIDEO_ID.fullmatch(url.removeprefix(singles))}
             try:
                 for index, url in enumerate(urls, 1):
                     if self.cancel.is_set():
@@ -407,10 +405,14 @@ class Worker:
         return entries
 
     def read_listing(self, common, url):
-        listing = json.loads(self.run([*common, "--flat-playlist", "--dump-single-json", "--", url],
+        list_id = parse_qs(urlsplit(url).query).get("list", [""])[0]
+        mix_limit = ["--playlist-end", "50"] if list_id.startswith("RD") else []
+        listing = json.loads(self.run([*common, "--flat-playlist", *mix_limit, "--dump-single-json", "--", url],
                                       capture=True) or "{}") or {}
         entries = listing.get("entries")
         playlist = entries is not None
+        if list_id and not playlist:
+            raise RuntimeError("YouTube no devolvió la lista de reproducción. Vuelve a intentarlo.")
         if entries is None and listing.get("id"):
             entries = [listing]
         if not entries:
@@ -839,8 +841,10 @@ class App:
                             return
                         self.preview = True
                         self.url.configure(state="disabled")
+                        self.heading.pack_forget()
                         self.cancel_preview.pack(side="right", padx=(4, 8))
                         self.remove_items.pack(side="right", padx=(6, 0))
+                        self.heading.pack(side="left")
                         self.remove_items.configure(state="disabled")
                         self.count.configure(text=f"{len(self.items)} para descargar")
                         self.go.configure(text="Descargar selección ↓", state="normal")

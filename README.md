@@ -11,7 +11,7 @@
 1. Descarga el ZIP de Windows x64 y extrae todo su contenido en una carpeta.
 2. Abre `simply_yt_dwn.exe`. Pulsa **Cambiar carpeta** si quieres elegir dónde guardar los archivos.
 3. Pega un enlace de YouTube, elige **Video** o **Audio** y pulsa **Descargar**.
-4. Para varios enlaces, abre **Lista manual**, pega uno por línea y pulsa **Revisar lista**. Si pegas una lista de reproducción en el campo principal, también verás la cola antes de descargar.
+4. Para varios enlaces, abre **Lista manual**, pega uno por línea y pulsa **Revisar lista**. Si pegas una lista de reproducción o un Mix de YouTube en el campo principal, también verás la cola antes de descargar. La vista previa de un Mix muestra hasta 50 elementos.
 5. En la vista previa puedes quitar elementos. Pulsa **Descargar selección** para iniciar la cola. Si un elemento falla, selecciona su fila para ver el motivo y usa **Reintentar fallidos** cuando corresponda.
 
 Si YouTube pide verificar tu sesión, inicia sesión en una ventana normal de Firefox y elige **Usar sesión de Firefox** en la app.
@@ -40,7 +40,7 @@ Descarga el ZIP de [Releases](https://github.com/b3smart/simply_yt_dwn/releases/
 1. Download the Windows x64 ZIP and extract all its contents into a folder.
 2. Run `simply_yt_dwn.exe`. Select **Cambiar carpeta** (Change folder) to choose where files are saved.
 3. Paste a YouTube link, choose **Video** or **Audio**, and select **Descargar** (Download).
-4. For multiple links, open **Lista manual** (Custom list), paste one link per line, and select **Revisar lista** (Review list). A playlist pasted in the main field also opens a preview.
+4. For multiple links, open **Lista manual** (Custom list), paste one link per line, and select **Revisar lista** (Review list). A YouTube playlist or Mix pasted into the main field also opens a preview. A Mix preview lists up to 50 items.
 5. Remove any unwanted entries, then select **Descargar selección** (Download selection). If an item fails, select its row to see why and use **Reintentar fallidos** (Retry failed) when appropriate.
 
 If YouTube asks you to verify your session, sign in through a standard Firefox window and select **Usar sesión de Firefox** (Use Firefox session) in the app.

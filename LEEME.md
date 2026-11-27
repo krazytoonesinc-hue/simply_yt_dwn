@@ -17,7 +17,7 @@ La carpeta bin contiene yt-dlp, FFmpeg, FFprobe y Deno. Puedes reemplazar yt-dlp
 - Deno 2.9.8: https://github.com/denoland/deno/releases/tag/v2.9.8
 - Python 3.14 y Tcl/Tk, empaquetados con PyInstaller 6.21: https://www.python.org/ y https://pyinstaller.org/
 
-Un enlace a un video dentro de un Mix de YouTube descarga el video enlazado. En las listas normales, selecciona las canciones que quieras excluir, pulsa **Quitar seleccionados** y luego **Descargar selección**. La app sigue descargando mientras convierte un archivo. Convierte uno a la vez, en el orden en que se descargaron.
+En las listas de reproducción y los Mix de YouTube, selecciona las canciones que quieras excluir, pulsa **Quitar seleccionados** y luego **Descargar selección**. La app sigue descargando mientras convierte un archivo. Convierte uno a la vez, en el orden en que se descargaron.
 
 ## Verificación de YouTube
 
@@ -32,3 +32,5 @@ Los títulos públicos se consultan en paralelo. Si un título no está disponib
 ## Etiquetas musicales
 
 En modo Audio, la app busca la grabación en MusicBrainz por título, artista y duración. Cuando hay una coincidencia clara, incrusta los datos disponibles de la edición en el FLAC. Si la coincidencia es ambigua o el servicio no responde, guarda las etiquetas disponibles del origen. La selección de una edición puede variar según los datos de origen.
+
+Los Mix son listas dinámicas. La vista previa muestra hasta 50 elementos. Para descargar un solo video, usa su enlace sin el parámetro `list`.
